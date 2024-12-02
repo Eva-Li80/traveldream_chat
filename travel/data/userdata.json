@@ -1,0 +1,221 @@
+{
+    "users": [
+      {
+        "id": "1",
+        "name": "Anna",
+        "email": "anna@example.com",
+        "avatar": "user1.jpg",
+        "country": "Sverige"
+      },
+      {
+        "id": "2",
+        "name": "Elsa",
+        "email": "elsa@example.com",
+        "avatar": "user2.jpg",
+        "country": "Danmark"
+      },
+      {
+        "id": "3",
+        "name": "Erik",
+        "email": "erik@example.com",
+        "avatar": "user3.jpg",
+        "country": "Norge"
+      },
+      {
+        "id": "4",
+        "name": "Bettan",
+        "email": "bettan@example.com",
+        "avatar": "user4.jpg",
+        "country": "Finland"
+      },
+      {
+        "id": "5",
+        "name": "Kalle",
+        "email": "kalle@example.com",
+        "avatar": "user5.jpg",
+        "country": "Island"
+      },
+      {
+        "id": "6",
+        "name": "Stina",
+        "email": "stina@example.com",
+        "avatar": "user6.jpg",
+        "country": "Norge"
+      },
+      {
+        "id": "7",
+        "name": "Kelly",
+        "email": "kelly@example.com",
+        "avatar": "user7.jpg",
+        "country": "Storbritannien"
+      },
+      {
+        "id": "8",
+        "name": "Sara",
+        "email": "sara@example.com",
+        "avatar": "user8.jpg",
+        "country": "Frankrike"
+      }
+    ],
+    "posts": [
+      {
+        "id": "1",
+        "title": "Ett äventyr i skogen",
+        "text": "Jag hittade ett märkligt träd som verkade leva!",
+        "authorId": 1,
+        "likes": 0,
+        "country": "Sverige",
+        "city": "Stockholm",
+        "comments": [
+          {
+            "id": 1,
+            "text": "Låter spännande, vilket träd var det?",
+            "authorId": 2
+          },
+          {
+            "id": 2,
+            "text": "Var försiktig nästa gång!",
+            "authorId": 5
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "title": "Ett hav fullt av färger",
+        "text": "Havet skiftade i regnbågens färger idag. Magiskt!",
+        "authorId": 1,
+        "likes": 0,
+        "country": "Danmark",
+        "city": "Köpenhamn",
+        "comments": [
+          {
+            "id": 3,
+            "text": "Jag måste se det själv någon gång!",
+            "authorId": 4
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "title": "Mina tankar om mat",
+        "text": "Jag älskar att äta, men inget slår en god insektspaj.",
+        "authorId": 3,
+        "likes": 0,
+        "country": "Norge",
+        "city": "Oslo",
+        "comments": [
+          {
+            "id": 4,
+            "text": "Mums! Har du receptet?",
+            "authorId": 6
+          },
+          {
+            "id": 5,
+            "text": "Insekter är inte riktigt min grej...",
+            "authorId": 10
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "title": "Barriären sviktar",
+        "text": "Jag känner av vibrationer i barriären. Något är på gång.",
+        "authorId": 4,
+        "likes": 0,
+        "country": "Finland",
+        "city": "Helsingfors",
+        "comments": [
+          {
+            "id": 6,
+            "text": "Vi borde kalla in förstärkning!",
+            "authorId": 8
+          },
+          {
+            "id": 7,
+            "text": "Det låter oroande, håll mig uppdaterad.",
+            "authorId": 1
+          },
+          {
+            "id": 8,
+            "text": "Jag kan hjälpa till om du behöver.",
+            "authorId": 9
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "title": "Nya vänner",
+        "text": "Jag träffade två små fåglar som hjälpte mig idag.",
+        "authorId": 5,
+        "likes": 0,
+        "country": "Island",
+        "city": "Reykjavik",
+        "comments": [
+          {
+            "id": 9,
+            "text": "Fåglar är fantastiska! Vad gjorde de?",
+            "authorId": 7
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "title": "Fullmånen",
+        "text": "Under fullmånen blir jag extra kreativ. Idag målade jag ett mästerverk.",
+        "authorId": 6,
+        "likes": 0,
+        "country": "Norge",
+        "city": "Bergen",
+        "comments": [
+          {
+            "id": 10,
+            "text": "Jag vill gärna se ditt konstverk!",
+            "authorId": 3
+          },
+          {
+            "id": 11,
+            "text": "Fullmånen påverkar mig också.",
+            "authorId": 10
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "title": "Upptäckten i bergen",
+        "text": "Det finns en grotta här som ingen har sett förut!",
+        "authorId": 7,
+        "likes": 0,
+        "country": "Storbritannien",
+        "city": "London",
+        "comments": [
+          {
+            "id": 12,
+            "text": "Vi måste utforska den tillsammans!",
+            "authorId": 4
+          },
+          {
+            "id": 13,
+            "text": "Var försiktig, det kan vara farligt.",
+            "authorId": 2
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "title": "Ett hemligt recept",
+        "text": "Jag hittade ett recept på den godaste soppa jag någonsin smakat.",
+        "authorId": 8,
+        "likes": 0,
+        "country": "Frankrike",
+        "city": "Paris",
+        "comments": [
+          {
+            "id": 14,
+            "text": "Dela receptet, snälla!",
+            "authorId": 6
+          }
+        ]
+      }
+    ]
+  }
+  
