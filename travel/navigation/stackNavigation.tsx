@@ -1,5 +1,5 @@
 import React from "react";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import AllPosts from "../screens/AllPosts";
 import PostDetails from "../screens/PostDetails";
@@ -12,28 +12,30 @@ const AllPostsStack = createNativeStackNavigator<RootStackParamList>();
 export default function StackNav() {
   return (
     <AllPostsStack.Navigator>
-      <AllPostsStack.Screen name="AllPosts" 
-      component={AllPosts} 
-      options={{
-        headerShown: false,
-      }} />
+      <AllPostsStack.Screen
+        name="AllPosts"
+        component={AllPosts}
+        options={{
+          headerShown: false,
+        }}
+      />
       <AllPostsStack.Screen
         name="PostDetails"
         component={PostDetails}
         options={{ title: "Rses Inlägg" }}
       />
-      <AllPostsStack.Screen 
-        name="Home" 
-        component={Home} 
+      <AllPostsStack.Screen
+        name="Home"
+        component={Home}
         options={{
-          title: ''
+          title: "",
         }}
       />
-      <AllPostsStack.Screen 
-        name="Profile" 
-        component={Profile} 
+      <AllPostsStack.Screen
+        name="Profile"
+        component={Profile}
         options={{
-          title: 'Profile',
+          title: "Profile",
         }}
       />
     </AllPostsStack.Navigator>

@@ -30,7 +30,7 @@ export interface Comment {
   }
 
   export type RootStackParamList = {
-    AllPosts: undefined;
+    AllPosts: { user: User | null };
     PostDetails: {id: string}
     Home: undefined
     Profile: undefined
