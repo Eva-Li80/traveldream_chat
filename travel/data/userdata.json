@@ -230,6 +230,28 @@
           "authorId": "6"
         }
       ]
+    },
+    {
+      "id": "1733229105418",
+      "title": "test",
+      "text": "ada\n\n",
+      "authorId": "1",
+      "comments": [],
+      "likes": 0,
+      "country": "",
+      "city": "",
+      "image": ""
+    },
+    {
+      "id": "1733229926520",
+      "title": "reser i spanien",
+      "text": "spanien content",
+      "authorId": "1",
+      "comments": [],
+      "likes": 0,
+      "country": "spanien",
+      "city": "alicante",
+      "image": "resa3.jpg"
     }
   ]
 }

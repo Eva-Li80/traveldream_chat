@@ -1,3 +1,5 @@
+import { Post } from "../types/type";
+
 const API_URL_USERS = 'http://10.0.2.2:3001/users';
 const API_URL_POST = 'http://10.0.2.2:3001/posts';
 
@@ -47,7 +49,7 @@ export const addUsers = async (users: { name: string; email: string; avatar: str
   };
 
   
-export const addPost = async (poster: { title: string; text: string; authorId: string; likes: number, country: string, city: string,   image: string, comments: string[]; }) => {
+export const addPoster = async (poster: Post) => {
   try {
     const response = await fetch(API_URL_POST, {
       method: 'POST',
@@ -67,14 +69,14 @@ export const addPost = async (poster: { title: string; text: string; authorId: s
   }
 };
 
-export const updatePost = async (updatedPost: { id: string; title: string; text: string; authorId: string; likes: number, country: string, city: string,   image: string, comments: string[]; }) => {
+export const updatePost = async (poster: Post) => {
   try {
-    const response = await fetch(`${API_URL_POST}/${updatedPost.id}`, {
+    const response = await fetch(`${API_URL_POST}/${poster.id}`, {
       method: 'PUT', 
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(updatedPost),
+      body: JSON.stringify(poster),
     });
 
     if (!response.ok) {
