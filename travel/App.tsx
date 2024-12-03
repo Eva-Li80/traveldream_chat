@@ -1,10 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, View } from "react-native";
+import TabNav from "./navigation/tabNavigation";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>   Resedröm chatten  gå från dröm till resa</Text>
+      <TabNav />
       <StatusBar style="auto" />
     </View>
   );
@@ -12,9 +13,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1, // Tillåter att `TabNav` tar upp hela skärmytan
+    backgroundColor: "#fff",
   },
 });

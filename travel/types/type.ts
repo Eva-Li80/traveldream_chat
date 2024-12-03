@@ -27,4 +27,9 @@ export interface Comment {
     users: User[];
     posts: Post[];
   }
+
+  export type RootStackParamList = {
+    AllPosts: undefined;
+    PostDetails: {id: string}
+  }
   
