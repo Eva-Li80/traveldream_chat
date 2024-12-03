@@ -12,6 +12,7 @@ export interface Comment {
     likes: number;
     country: string;
     city: string;
+    image: string
     comments: Comment[];
   }
  
@@ -21,7 +22,6 @@ export interface Comment {
     email: string;
     avatar: string;
     country: string;
-    image: string
   }
   
   export interface Data {

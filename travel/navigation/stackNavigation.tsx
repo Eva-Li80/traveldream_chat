@@ -20,13 +20,13 @@ export default function StackNav() {
       <AllPostsStack.Screen
         name="PostDetails"
         component={PostDetails}
-        options={{ title: "Post Details" }}
+        options={{ title: "Rses Inlägg" }}
       />
       <AllPostsStack.Screen 
         name="Home" 
         component={Home} 
         options={{
-          title: 'Home'
+          title: ''
         }}
       />
       <AllPostsStack.Screen 

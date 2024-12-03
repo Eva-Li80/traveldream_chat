@@ -46,14 +46,13 @@ const userSlice = createSlice({
     },
 
     updateUser: (state, action: PayloadAction<User>) => {
-      const { id, name, email, avatar, country, image } = action.payload;
+      const { id, name, email, avatar, country} = action.payload;
       const users = state.users.find((user) => user.id === id);
       if (users) {
         users.name = name;
         users.email = email;
         users.avatar = avatar;
         users.country = country;
-        users.image = image;
       }
     },
   },

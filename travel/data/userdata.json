@@ -5,64 +5,63 @@
       "name": "Anna",
       "email": "anna@example.com",
       "avatar": "user1.jpg",
-      "country": "Sverige",
-      "image": "user1.jpg"
+      "country": "Sverige"
     },
     {
       "id": "2",
       "name": "Elsa",
       "email": "elsa@example.com",
       "avatar": "user2.jpg",
-      "country": "Danmark",
-      "image": "user2.jpg"
+      "country": "Danmark"
     },
     {
       "id": "3",
       "name": "Erik",
       "email": "erik@example.com",
       "avatar": "user3.jpg",
-      "country": "Norge",
-      "image": "user3.jpg"
+      "country": "Norge"
     },
     {
       "id": "4",
       "name": "Bettan",
       "email": "bettan@example.com",
       "avatar": "user4.jpg",
-      "country": "Finland",
-      "image": "user4.jpg"
+      "country": "Finland"
     },
     {
       "id": "5",
       "name": "Kalle",
       "email": "kalle@example.com",
       "avatar": "user5.jpg",
-      "country": "Island",
-      "image": "user5.jpg"
+      "country": "Island"
     },
     {
       "id": "6",
       "name": "Stina",
       "email": "stina@example.com",
       "avatar": "user6.jpg",
-      "country": "Norge",
-      "image": "user6.jpg"
+      "country": "Norge"
     },
     {
       "id": "7",
       "name": "Kelly",
       "email": "kelly@example.com",
       "avatar": "user7.jpg",
-      "country": "Storbritannien",
-      "image": "user7.jpg"
+      "country": "Storbritannien"
     },
     {
       "id": "8",
       "name": "Sara",
       "email": "sara@example.com",
       "avatar": "user8.jpg",
-      "country": "Frankrike",
-      "image": "user8.jpg"
+      "country": "Frankrike"
+    },
+    {
+      "id": "b984",
+      "name": "test",
+      "email": "tets",
+      "avatar": "tets",
+      "country": "tets"
     }
   ],
   "posts": [
@@ -74,6 +73,7 @@
       "likes": 0,
       "country": "Sverige",
       "city": "Stockholm",
+      "image": "resa1.jpg",
       "comments": [
         {
           "id": "1",
@@ -95,11 +95,12 @@
       "likes": 0,
       "country": "Danmark",
       "city": "Köpenhamn",
+      "image": "resa2.jpg",
       "comments": [
         {
           "id": "3",
           "text": "Jag måste se det själv någon gång!",
-          "authorId": 4
+          "authorId": "4"
         }
       ]
     },
@@ -111,6 +112,7 @@
       "likes": 0,
       "country": "Norge",
       "city": "Oslo",
+      "image": "resa3.jpg",
       "comments": [
         {
           "id": "4",
@@ -132,6 +134,7 @@
       "likes": 0,
       "country": "Finland",
       "city": "Helsingfors",
+      "image": "resa4.jpg",
       "comments": [
         {
           "id": "6",
@@ -158,6 +161,7 @@
       "likes": 0,
       "country": "Island",
       "city": "Reykjavik",
+      "image": "resa5.jpg",
       "comments": [
         {
           "id": "9",
@@ -174,6 +178,7 @@
       "likes": 0,
       "country": "Norge",
       "city": "Bergen",
+      "image": "resa6.jpg",
       "comments": [
         {
           "id": "10",
@@ -195,6 +200,7 @@
       "likes": 0,
       "country": "Storbritannien",
       "city": "London",
+      "image": "resa7.jpg",
       "comments": [
         {
           "id": "12",
@@ -216,6 +222,7 @@
       "likes": 0,
       "country": "Frankrike",
       "city": "Paris",
+      "image": "resa8.jpg",
       "comments": [
         {
           "id": "14",

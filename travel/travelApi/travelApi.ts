@@ -13,7 +13,7 @@ export const getUsers = async () => {
     throw error;
   }
 };
-export const addUsers = async (users: { name: string; email: string; avatar: string, country: string, image: string; }) => {
+export const addUsers = async (users: { name: string; email: string; avatar: string, country: string}) => {
     try {
       const response = await fetch(API_URL_USERS, {
         method: 'POST',
@@ -47,7 +47,7 @@ export const addUsers = async (users: { name: string; email: string; avatar: str
   };
 
   
-export const addPost = async (poster: { title: string; text: string; authorId: string; likes: number, country: string, city: string, comments: string[]; }) => {
+export const addPost = async (poster: { title: string; text: string; authorId: string; likes: number, country: string, city: string,   image: string, comments: string[]; }) => {
   try {
     const response = await fetch(API_URL_POST, {
       method: 'POST',
@@ -67,7 +67,7 @@ export const addPost = async (poster: { title: string; text: string; authorId: s
   }
 };
 
-export const updatePost = async (updatedPost: { id: string; title: string; text: string; authorId: string; likes: number, country: string, city: string, comments: string[]; }) => {
+export const updatePost = async (updatedPost: { id: string; title: string; text: string; authorId: string; likes: number, country: string, city: string,   image: string, comments: string[]; }) => {
   try {
     const response = await fetch(`${API_URL_POST}/${updatedPost.id}`, {
       method: 'PUT', 

@@ -14,6 +14,7 @@ import { AppDispatch, RootState } from "../redux/store";
 import { fetchUsers } from "../redux/userSlice";
 import imageMapping from "../utils/ImgMapping";
 import ButtonNavigate from "../components/buttons/ButtonNavigate";
+import img from "../assets/images/user2.jpg"
 
 type HomeScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -39,27 +40,33 @@ const Home = ({ navigation }: Props) => {
   }
 
   if (error) {
-    return <Text style={{ color: "red" }}>Fel vid hämtning: {error}</Text>;
+    return <Text style={{ color: "red" }}>Error: {error}</Text>;
   }
 
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scroll}>
-        <Text style={styles.welcomeText}>Välkommen till user appen!</Text>
+        <Text style={styles.welcomeText}>Travel dream chat... 
+        <Text style={styles.txt}>( from dream to journey )</Text>
+        </Text>
+        <Text style={styles.descriptionText}>An app where you can share your travel experiences, photos, tips and thoughts.
+          By sharing your experiences, others can gain a better understanding of them
+          places you visit. At the same time, you can preserve your own memories. Choose
+          if you want to share with others or keep the posts private.</Text>
         <View style={styles.imageRow}>
-          {users.map((user) => (
-            <View style={styles.imageContainer} key={user.id}>
+
+            <View style={styles.imageContainer}>
               <Image
                 style={styles.monsterImage}
-                source={imageMapping[user.image]}
+                source={imageMapping["user1.jpg"]}
               />
             </View>
-          ))}
+          
         </View>
       </ScrollView>
 
       <ButtonNavigate
-        title="Visa alla users"
+        title="Choose profile"
         navigate={() => navigation.navigate("Profile")}
       />
     </View>
@@ -77,16 +84,28 @@ const styles = StyleSheet.create({
 
   },
   welcomeText: {
-    fontSize: 28,
+    fontSize: 33,
     fontWeight: "bold",
     marginBottom: 30,
     textAlign: "center",
     marginTop: 20,
     color: "white",
     backgroundColor: "gray",
-    padding: 20,
+    padding: 10,
     borderWidth: 2,
     borderColor: "orange",
+    marginLeft: 15,
+    marginRight: 15
+  },
+  txt:{
+    fontSize: 22
+  },
+  descriptionText: {
+    fontSize: 18,
+    marginBottom: 20,
+    textAlign: "center",
+    paddingHorizontal: 15,
+    color: "gray",
   },
   imageRow: {
     flexDirection: "row",
