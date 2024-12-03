@@ -12,6 +12,7 @@ Man kan välja att dela den med andra eller behålla inlägget för sig själv.
 Klona Projektet på github:
  ```bash
    git clone https://github.com/Eva-Li80/traveldream_chat.git
+    ```bash
 
 
 ## Teknik stack & Verktyg
