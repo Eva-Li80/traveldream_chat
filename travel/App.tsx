@@ -1,19 +1,19 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, View } from "react-native";
 import TabNav from "./navigation/tabNavigation";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <TabNav />
-      <StatusBar style="auto" />
-    </View>
+    <GestureHandlerRootView>
+    <Provider store={store}>
+      <NavigationContainer>
+        <TabNav />
+      </NavigationContainer>
+    </Provider>
+  </GestureHandlerRootView>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1, // Tillåter att `TabNav` tar upp hela skärmytan
-    backgroundColor: "#fff",
-  },
-});

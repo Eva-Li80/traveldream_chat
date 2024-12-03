@@ -28,5 +28,6 @@ git clone https://github.com/Eva-Li80/traveldream_chat.git
 - FontAwesome
 - React native vector icons
 - Typescript
+- Redux toolkit
 
 ### Av: Eva-Li Nätynki Bodén  Datum:

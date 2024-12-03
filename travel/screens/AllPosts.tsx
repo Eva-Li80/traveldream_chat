@@ -1,9 +1,9 @@
-import { StackNavigationProp } from '@react-navigation/stack'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import { RootStackParamList } from '../types/type'
 
-type AllPostNavProps = StackNavigationProp<RootStackParamList, "AllPosts">
+type AllPostNavProps = NativeStackNavigationProp<RootStackParamList, "AllPosts">
 
 type AllPostProps = {
     navigation: AllPostNavProps

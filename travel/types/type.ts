@@ -21,6 +21,7 @@ export interface Comment {
     email: string;
     avatar: string;
     country: string;
+    image: string
   }
   
   export interface Data {
@@ -31,5 +32,7 @@ export interface Comment {
   export type RootStackParamList = {
     AllPosts: undefined;
     PostDetails: {id: string}
+    Home: undefined
+    Profile: undefined
   }
   

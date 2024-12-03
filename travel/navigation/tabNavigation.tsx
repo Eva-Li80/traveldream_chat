@@ -1,6 +1,5 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import {
   faHome,
@@ -20,7 +19,6 @@ const Tab = createBottomTabNavigator();
 
 export default function TabNav() {
   return (
-    <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
@@ -66,6 +64,5 @@ export default function TabNav() {
         headerShown: false,
       }} />
       </Tab.Navigator>
-    </NavigationContainer>
   );
 }
