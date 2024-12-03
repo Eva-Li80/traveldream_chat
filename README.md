@@ -10,15 +10,14 @@ Tanken är att andra som kanske vill besöka den platsen som du delar kan få en
 Samtidigt så sparar man sina minnen i sin app.
 Man kan välja att dela den med andra eller behålla inlägget för sig själv.
 
-## - Starta projektet
+## Hur man startar applikationen och hur den används:
 
-Klona Projektet på github:
+1. ### Klona ner cli projektet
 
-````bash
-  git clone https://github.com/Eva-Li80/traveldream_chat.git
+```bash
+git clone https://github.com/Eva-Li80/traveldream_chat.git
 
 ```
-
 
 ## Teknik stack & Verktyg
 - Expo: Ramverk för react native
@@ -31,4 +30,3 @@ Klona Projektet på github:
 - Typescript
 
 ### Av: Eva-Li Nätynki Bodén  Datum:
-````
