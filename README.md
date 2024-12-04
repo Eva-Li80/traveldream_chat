@@ -1,6 +1,6 @@
 # traveldream_chat
 
-![The library](public/assets/images)
+![Travel dream chat](public/assets/images/resa.jpg)
 
 ## - Beskrivning
 
@@ -8,7 +8,6 @@ En app som man kan dela med sig av sina upplevelser/platser som man besöker.
 Man kan dela bilder, tankar, tips osv.
 Tanken är att andra som kanske vill besöka den platsen som du delar kan få en bättre uppfattning av den.
 Samtidigt så sparar man sina minnen i sin app.
-Man kan välja att dela den med andra eller behålla inlägget för sig själv.
 
 ## Hur man startar applikationen och hur den används:
 

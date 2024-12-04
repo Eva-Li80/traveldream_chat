@@ -49,7 +49,7 @@ const Home = ({ navigation }: Props) => {
         <View style={styles.con}>
         <Image style={styles.userImage} source={travelImageMapping["resa.jpg"]} />
         <Text style={{color: "teal", fontSize: 20}}>from drem to journey..</Text>
-         <Text style={styles.text}>En app där du kan dela upplevelser och platser du besökt med bilder, tankar och tips. Andra kan få inspiration och en bättre uppfattning om platserna, samtidigt som du sparar dina minnen. Inlägg kan delas offentligt eller behållas privata.</Text>
+         <Text style={styles.text}>En app där du kan dela upplevelser och platser du besökt med bilder, tankar och tips. Andra kan få inspiration och en bättre uppfattning om platserna, samtidigt som du sparar dina minnen. </Text>
         </View>
       </ScrollView>
 
