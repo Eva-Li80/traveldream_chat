@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, Button, TextInput, StyleSheet, ScrollView, TouchableOpacity , Image} from 'react-native';
+import { View, Text, TextInput, StyleSheet, ScrollView, TouchableOpacity , Image} from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../redux/store';
 import { addPost } from '../redux/postSlice';
 import { Post } from '../types/type';
 import { addPoster } from '../travelApi/travelApi';
 import postImageMapping from '../utils/postImgMappinf';
+import Button from '../components/buttons/Button';
 
 const availableImages = Object.keys(postImageMapping);
 
@@ -90,6 +91,7 @@ const NewPost = () => {
           value={city}
           onChangeText={setCity}
         />
+           <Text style={{fontSize: 18}}>Coose picture..⬇️</Text>
          <ScrollView horizontal style={styles.imageSelector}>
           {availableImages.map((imageName) => (
             <TouchableOpacity
@@ -101,10 +103,11 @@ const NewPost = () => {
           ))}
         </ScrollView>
 
+
         {image && (
           <Image source={postImageMapping[image]} style={styles.selectedImage} />
         )}
-        <Button onPress={handleSubmit} title="Post" color="#FF6347" />
+        <Button onPress={handleSubmit} title="Post" />
       </View>
     </View>
   );
@@ -114,18 +117,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#f1f1f1',
   },
   title: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: 'bold',
     textAlign: 'center',
     marginVertical: 20,
   },
   subtitle: {
-    fontSize: 16,
+    fontSize: 18,
     textAlign: 'center',
     marginBottom: 30,
+    color: "teal"
   },
   error: {
     color: 'red',
@@ -154,10 +158,11 @@ const styles = StyleSheet.create({
   input: {
     height: 40,
     borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 15,
+    borderWidth: 2,
+    marginBottom: 25,
     paddingHorizontal: 10,
     borderRadius: 5,
+    backgroundColor: "white"
   },
   textArea: {
     height: 100,

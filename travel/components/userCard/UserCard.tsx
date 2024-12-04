@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Card, Text ,} from "react-native-paper";
-import { StyleSheet } from 'react-native'
+import { Card, Text } from "react-native-paper";
+import { StyleSheet } from "react-native";
 
 type UserCardProps = {
   name: string;
@@ -9,15 +9,16 @@ type UserCardProps = {
   country: string;
 };
 
-const UserCard = ({ name, email, avatar, country}: UserCardProps) => (
+const UserCard = ({ name, email, avatar, country }: UserCardProps) => (
   <>
     <Card style={styles.card}>
-      <Card.Title title={name} />
+      <Card.Title title={`- ${name} - `} />
       <Card.Cover style={styles.image} source={avatar} />
-      <Card.Content>
-        <Text variant="bodyMedium">{name} har {email} {country} färg</Text>
+      <Card.Content style={styles.content}>
+        <Text variant="bodyLarge">From: {country} </Text>
+        <Text variant="bodyLarge">Email: {email}</Text>
+        <Text style={styles.choose}>Choose {name} ⬆️</Text>
       </Card.Content>
-       <Text>Se mina inlägg 👋 🥰 ⬆️</Text>
     </Card>
   </>
 );
@@ -29,13 +30,23 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     justifyContent: "center",
     alignItems: "center",
-    width: 400,
-    padding: 20
-   
+    minWidth: 300,
+    padding: 10,
+    backgroundColor: "lightgray",
+    borderWidth: 2,
+    borderColor: "orange",
   },
   image: {
-    width:  200,
-    height: 200, 
+    width: 200,
+    height: 170,
+  },
+  content: {
+    marginTop: 10,
+    fontSize: 20
+  },
+  choose: {
+    textAlign: "center",
+    marginTop: 20,
+    fontSize: 20
   },
 });
-

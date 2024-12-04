@@ -4,7 +4,7 @@ import {
   Text,
   TouchableOpacity,
   StyleSheet,
-  Image,
+  Pressable,
 } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux/store";
@@ -13,6 +13,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import { RootStackParamList, User } from "../types/type";
 import { setActiveUser } from "../redux/userSlice";
 import imageMapping from "../utils/ImgMapping";
+import UserCard from "../components/userCard/UserCard";
 
 type UsersNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -27,8 +28,6 @@ const ChooseProfile = ({ navigation }: Props) => {
   const dispatch = useDispatch();
   const users = useSelector((state: RootState) => state.users.users);
   
-  
-
   const handleUser = (user: User | null) => {
     dispatch(setActiveUser(user));
     navigation.navigate("Profile", {user});
@@ -36,18 +35,23 @@ const ChooseProfile = ({ navigation }: Props) => {
 
   return (
     <ScrollView>
-      <Text style={styles.title}>Choose profile</Text>
+      <View style={styles.con}>
+        <Text style={styles.title}>Choose profile</Text>
+       <Pressable
+        onPress={() => {
+          navigation.navigate("AddProfile");
+        }}
+        >
+        <Text style={styles.profile}>add a new profile  ➕</Text>
+      </Pressable>
+      </View>
       <View style={styles.container}>
         <View>
-          {users.map((u) => (
-            <TouchableOpacity key={u.id} onPress={() => handleUser(u)}>
-              <View style={styles.container}>
-                <Image
-                  style={styles.userImage}
-                  source={imageMapping[u.avatar]}
-                />
-              </View>
-             <Text style={styles.userName}>{`Välj ${u.name}`} ⬆️</Text>
+          {users.map((user) => (
+            <TouchableOpacity key={user.id} onPress={() => handleUser(user)}>
+    
+              <UserCard name={user.name} email={user.email} avatar={imageMapping[user.avatar]} country={user.country}/>
+
             </TouchableOpacity>
           ))}
         </View>
@@ -57,17 +61,26 @@ const ChooseProfile = ({ navigation }: Props) => {
 };
 
 const styles = StyleSheet.create({
+  con:{
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center', 
+    padding: 10,
+  },
+  profile:{
+  marginBottom: 40,
+  marginRight: 10,
+  fontSize: 18,
+  color: "teal",
+  textDecorationLine: "underline",
+  fontWeight: "bold"
+  },
   container: {
     flex: 2,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
     padding: 10,
-  },
-  userImage: {
-    width: 150,
-    height: 150,
-    resizeMode: "contain",
   },
   userName: {
     marginBottom: 40,
@@ -76,12 +89,13 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: "center",
-    marginTop: 50,
-    fontSize: 20,
+    marginTop: 60,
+    fontSize: 18,
     fontWeight: "bold",
-    marginBottom: 30,
+    marginBottom: 5,
+    marginLeft: 50,
+    color: "orange"
   },
-
 });
 
 export default ChooseProfile;

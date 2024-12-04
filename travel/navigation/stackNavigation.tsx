@@ -5,7 +5,9 @@ import Home from '../screens/Home';
 import Profile from '../screens/Profile';
 import AllPosts from '../screens/AllPosts';
 import NewPost from '../screens/NewPost';
-import Profiles from '../screens/Profiles';
+import ChooseProfile from '../screens/ChooseProfile';
+import AddProfile from '../screens/AddProfile';
+import PostDetail from '../screens/PostDetail';
 
 
 const Stack = createNativeStackNavigator();
@@ -23,15 +25,6 @@ const MyStack = () => {
         component={Home} 
         options={{
           title: 'Home', 
-          headerBackVisible: true,
-          headerBackTitle: 'Back', 
-        }}
-      />
-      <Stack.Screen 
-        name="Profiles" 
-        component={Profiles} 
-        options={{
-          title: 'Profiles',
           headerBackVisible: true,
           headerBackTitle: 'Back', 
         }}
@@ -55,6 +48,15 @@ const MyStack = () => {
         }}
       />
        <Stack.Screen 
+        name="PostDetail" 
+        component={PostDetail} 
+        options={{
+          title: 'PostDetail',
+          headerBackVisible: true,
+          headerBackTitle: 'Back', 
+        }}
+      />
+       <Stack.Screen 
         name="NewPost" 
         component={NewPost} 
         options={{
@@ -63,6 +65,21 @@ const MyStack = () => {
           headerBackTitle: 'Back', 
         }}
       />
+          <Stack.Screen 
+        name="ChooseProfile" 
+        component={ChooseProfile} 
+        options={{ headerShown: false }} 
+      />
+      <Stack.Screen 
+        name="AddProfile" 
+        component={AddProfile} 
+        options={{
+          title: 'AddProfile',
+          headerBackVisible: true,
+          headerBackTitle: 'Back', 
+        }}
+      />
+        
     </Stack.Navigator>
   );
 };

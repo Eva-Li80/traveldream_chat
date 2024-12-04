@@ -12,8 +12,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../redux/store";
 import { RootStackParamList } from "../types/type";
 import { fetchUsers } from "../redux/userSlice";
-import imageMapping from "../utils/ImgMapping";
 import ButtonNavigate from "../components/buttons/ButtonNavigate";
+import travelImageMapping from "../utils/travelimg";
 
 type HomeNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
@@ -45,22 +45,17 @@ const Home = ({ navigation }: Props) => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scroll}>
-        <Text style={styles.welcomeText}>Travel dream chat.. ( from drem to journy )</Text>
-        <View style={styles.imageRow}>
-          {users.map((user) => (
-            <View style={styles.imageContainer} key={user.id}>
-              <Image
-                style={styles.userImage}
-                source={imageMapping[user.avatar]}
-              />
-            </View>
-          ))}
+        <Text style={styles.welcomeText}>Travel dream chat ! </Text>
+        <View style={styles.con}>
+        <Image style={styles.userImage} source={travelImageMapping["resa.jpg"]} />
+        <Text style={{color: "teal", fontSize: 20}}>from drem to journey..</Text>
+         <Text style={styles.text}>En app där du kan dela upplevelser och platser du besökt med bilder, tankar och tips. Andra kan få inspiration och en bättre uppfattning om platserna, samtidigt som du sparar dina minnen. Inlägg kan delas offentligt eller behållas privata.</Text>
         </View>
       </ScrollView>
 
       <ButtonNavigate
         title="Choose profile"
-        navigate={() => navigation.navigate("Profiles")}
+        navigate={() => navigation.navigate("ChooseProfile")}
       />
     </View>
   );
@@ -69,44 +64,37 @@ const Home = ({ navigation }: Props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "space-between",
     margin:20
   },
   scroll:{
     flexGrow: 1,
-
   },
   welcomeText: {
     fontSize: 32,
-    fontWeight: "bold",
-    marginBottom: 30,
     textAlign: "center",
-    marginTop: 20,
-    color: "white",
-    backgroundColor: "gray",
-    padding: 20,
-    borderWidth: 2,
-    borderColor: "orange",
+    margin: 10,
+    color: "teal",
+    fontWeight: "bold",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
-  imageRow: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    marginBottom: 20,
-  },
-  imageContainer: {
-    width: "48%",
-    marginBottom: 10,
-    alignContent: "center",
-    alignItems: "center",
+  con: {
+   alignContent: "center",
+   alignItems: "center",
   },
   userImage: {
-    width: 120,
-    borderRadius: 75,
-    resizeMode: "contain",
+    width: 360,
+    resizeMode: "cover",
     backgroundColor: "white",
-    height: 120,
+    height: "95%",
     margin: 10,
+    paddingLeft: 100
+  },
+  text:{
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#333',
+    marginTop: 10
   },
 });
 

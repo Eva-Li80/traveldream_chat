@@ -5,21 +5,21 @@
       "name": "Anna",
       "email": "anna@example.com",
       "avatar": "user1.jpg",
-      "country": "Sverige"
+      "country": "Sweden"
     },
     {
       "id": "2",
       "name": "Elsa",
       "email": "elsa@example.com",
       "avatar": "user2.jpg",
-      "country": "Danmark"
+      "country": "Denmark"
     },
     {
       "id": "3",
       "name": "Erik",
       "email": "erik@example.com",
       "avatar": "user3.jpg",
-      "country": "Norge"
+      "country": "Norway"
     },
     {
       "id": "4",
@@ -33,251 +33,207 @@
       "name": "Kalle",
       "email": "kalle@example.com",
       "avatar": "user5.jpg",
-      "country": "Island"
+      "country": "Iceland"
     },
     {
       "id": "6",
       "name": "Stina",
       "email": "stina@example.com",
       "avatar": "user6.jpg",
-      "country": "Norge"
+      "country": "Norway"
     },
     {
       "id": "7",
       "name": "Kelly",
       "email": "kelly@example.com",
       "avatar": "user7.jpg",
-      "country": "Storbritannien"
+      "country": "United Kingdom"
     },
     {
       "id": "8",
       "name": "Sara",
       "email": "sara@example.com",
       "avatar": "user8.jpg",
-      "country": "Frankrike"
+      "country": "France"
     }
   ],
   "posts": [
     {
       "id": "1",
-      "title": "Ett äventyr i skogen",
-      "text": "Jag hittade ett märkligt träd som verkade leva!",
+      "title": "An adventure in the forest",
+      "text": "I found a strange tree that seemed to be alive!",
       "authorId": "1",
       "likes": 0,
-      "country": "Sverige",
+      "country": "Sweden",
       "city": "Stockholm",
       "image": "resa1.jpg",
       "comments": [
         {
           "id": "1",
-          "text": "Låter spännande, vilket träd var det?",
+          "text": "Sounds exciting, which tree was it?",
           "authorId": "2"
         },
         {
           "id": "2",
-          "text": "Var försiktig nästa gång!",
+          "text": "Be careful next time!",
           "authorId": "5"
         }
       ]
     },
     {
       "id": "2",
-      "title": "Ett hav fullt av färger",
-      "text": "Havet skiftade i regnbågens färger idag. Magiskt!",
+      "title": "A sea full of colors",
+      "text": "The sea shifted in the colors of the rainbow today. Magical!",
       "authorId": "1",
       "likes": 0,
-      "country": "Danmark",
-      "city": "Köpenhamn",
+      "country": "Denmark",
+      "city": "Copenhagen",
       "image": "resa2.jpg",
       "comments": [
         {
           "id": "3",
-          "text": "Jag måste se det själv någon gång!",
+          "text": "I must see it myself sometime!",
           "authorId": "4"
         }
       ]
     },
     {
       "id": "3",
-      "title": "Mina tankar om mat",
-      "text": "Jag älskar att äta, men inget slår en god insektspaj.",
+      "title": "My thoughts on food",
+      "text": "I love eating, but nothing beats a good insect pie.",
       "authorId": "3",
       "likes": 0,
-      "country": "Norge",
+      "country": "Norway",
       "city": "Oslo",
       "image": "resa3.jpg",
       "comments": [
         {
           "id": "4",
-          "text": "Mums! Har du receptet?",
+          "text": "Yum! Do you have the recipe?",
           "authorId": "6"
         },
         {
           "id": "5",
-          "text": "Insekter är inte riktigt min grej...",
+          "text": "Insects are not really my thing...",
           "authorId": "10"
         }
       ]
     },
     {
       "id": "4",
-      "title": "Barriären sviktar",
-      "text": "Jag känner av vibrationer i barriären. Något är på gång.",
+      "title": "The barrier is failing",
+      "text": "I feel vibrations in the barrier. Something is happening.",
       "authorId": "4",
       "likes": 0,
       "country": "Finland",
-      "city": "Helsingfors",
+      "city": "Helsinki",
       "image": "resa4.jpg",
       "comments": [
         {
           "id": "6",
-          "text": "Vi borde kalla in förstärkning!",
+          "text": "We should call for reinforcements!",
           "authorId": "8"
         },
         {
           "id": "7",
-          "text": "Det låter oroande, håll mig uppdaterad.",
+          "text": "That sounds worrying, keep me updated.",
           "authorId": "1"
         },
         {
           "id": "8",
-          "text": "Jag kan hjälpa till om du behöver.",
+          "text": "I can help if you need.",
           "authorId": "9"
         }
       ]
     },
     {
       "id": "5",
-      "title": "Nya vänner",
-      "text": "Jag träffade två små fåglar som hjälpte mig idag.",
+      "title": "New friends",
+      "text": "I met two little birds that helped me today.",
       "authorId": "5",
       "likes": 0,
-      "country": "Island",
+      "country": "Iceland",
       "city": "Reykjavik",
       "image": "resa5.jpg",
       "comments": [
         {
           "id": "9",
-          "text": "Fåglar är fantastiska! Vad gjorde de?",
+          "text": "Birds are amazing! What did they do?",
           "authorId": "7"
         }
       ]
     },
     {
       "id": "6",
-      "title": "Fullmånen",
-      "text": "Under fullmånen blir jag extra kreativ. Idag målade jag ett mästerverk.",
+      "title": "The full moon",
+      "text": "Under the full moon, I get extra creative. Today I painted a masterpiece.",
       "authorId": "6",
       "likes": 0,
-      "country": "Norge",
+      "country": "Norway",
       "city": "Bergen",
       "image": "resa6.jpg",
       "comments": [
         {
           "id": "10",
-          "text": "Jag vill gärna se ditt konstverk!",
+          "text": "I would love to see your artwork!",
           "authorId": "3"
         },
         {
           "id": "11",
-          "text": "Fullmånen påverkar mig också.",
+          "text": "The full moon affects me too.",
           "authorId": "10"
         }
       ]
     },
     {
       "id": "7",
-      "title": "Upptäckten i bergen",
-      "text": "Det finns en grotta här som ingen har sett förut!",
+      "title": "Discovery in the mountains",
+      "text": "There is a cave here that no one has seen before!",
       "authorId": "7",
       "likes": 0,
-      "country": "Storbritannien",
+      "country": "United Kingdom",
       "city": "London",
       "image": "resa7.jpg",
       "comments": [
         {
           "id": "12",
-          "text": "Vi måste utforska den tillsammans!",
+          "text": "We have to explore it together!",
           "authorId": "4"
         },
         {
           "id": "13",
-          "text": "Var försiktig, det kan vara farligt.",
+          "text": "Be careful, it might be dangerous.",
           "authorId": "2"
         }
       ]
     },
     {
       "id": "8",
-      "title": "Ett hemligt recept",
-      "text": "Jag hittade ett recept på den godaste soppa jag någonsin smakat.",
+      "title": "A secret recipe",
+      "text": "I found a recipe for the best soup I've ever tasted.",
       "authorId": "8",
       "likes": 0,
-      "country": "Frankrike",
+      "country": "France",
       "city": "Paris",
       "image": "resa8.jpg",
       "comments": [
         {
           "id": "14",
-          "text": "Dela receptet, snälla!",
+          "text": "Share the recipe, please!",
           "authorId": "6"
         }
       ]
     },
     {
-      "id": "1733229105418",
-      "title": "test",
-      "text": "ada\n\n",
+      "id": "1733323998445",
+      "title": "sdfdf",
+      "text": "dsfsdf",
       "authorId": "1",
       "comments": [],
       "likes": 0,
-      "country": "",
-      "city": "",
-      "image": ""
-    },
-    {
-      "id": "1733229926520",
-      "title": "reser i spanien",
-      "text": "spanien content",
-      "authorId": "1",
-      "comments": [],
-      "likes": 0,
-      "country": "spanien",
-      "city": "alicante",
-      "image": "resa3.jpg"
-    },
-    {
-      "id": "1733238768743",
-      "title": "sdd",
-      "text": "aa",
-      "authorId": "1",
-      "comments": [],
-      "likes": 0,
-      "country": "aaa",
-      "city": "aa",
-      "image": "resa2.jpg"
-    },
-    {
-      "id": "1733239694343",
-      "title": "test",
-      "text": "testresa",
-      "authorId": "1",
-      "comments": [],
-      "likes": 0,
-      "country": "sweden",
-      "city": "boras",
-      "image": "resa3.jpg"
-    },
-    {
-      "id": "1733239762459",
-      "title": "saf",
-      "text": "saf",
-      "authorId": "3",
-      "comments": [],
-      "likes": 0,
-      "country": "sf",
-      "city": "asf",
-      "image": "resa3.jpg"
+      "country": "sdfsd",
+      "city": "sdfds",
+      "image": "resa5.jpg"
     }
   ]
 }

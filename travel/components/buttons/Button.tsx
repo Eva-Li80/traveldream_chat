@@ -3,27 +3,27 @@ import { TouchableOpacity, Text, View, StyleSheet } from "react-native";
 
 type ButtonProps = {
   title: string | any;
-  navigate: () => void;
+  onPress?: () => void
 };
 
-const ButtonNavigate = ({ title, navigate }: ButtonProps) => {
+const Button = ({ title, onPress}: ButtonProps) => {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.button} onPress={navigate}>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
+      <Text style={styles.button} >
         <Text style={styles.text}>{title}</Text>
-      </TouchableOpacity>
-    </View>
+      </Text>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   container: {           
     alignItems: 'center',
-    marginBottom: 20,
-  },
-  button: {
+},
+button: {
+      paddingHorizontal: 30,
+      paddingVertical: 10,
     backgroundColor: "orange", 
-    padding: 10,
     borderRadius: 5,
     alignItems: "center",
     borderWidth: 2,
@@ -31,8 +31,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    fontSize: 24,
+    fontSize: 20,
   },
 });
 
-export default ButtonNavigate;
+export default Button;
