@@ -17,6 +17,27 @@ git clone https://github.com/Eva-Li80/traveldream_chat.git
 
 ```
 
+2. 
+
+```bash
+cd traveldream_chat
+npm install
+
+```
+3. starta server
+
+```bash
+json-server --watch data/userdata.json --port 3001
+
+```
+
+4. starta appen 
+
+```bash
+npx expo start
+
+```
+
 ## Teknik stack & Verktyg
 - Expo: Ramverk för react native
 - React Native: Skapa mobil appliaktion
