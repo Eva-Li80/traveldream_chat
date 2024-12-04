@@ -1,7 +1,5 @@
 # traveldream_chat
 
-![Travel dream chat](public/assets//images/resa.jpg)
-
 
 ## - Beskrivning
 
