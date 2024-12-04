@@ -55,13 +55,6 @@
       "email": "sara@example.com",
       "avatar": "user8.jpg",
       "country": "Frankrike"
-    },
-    {
-      "id": "b984",
-      "name": "test",
-      "email": "tets",
-      "avatar": "tets",
-      "country": "tets"
     }
   ],
   "posts": [
@@ -251,6 +244,39 @@
       "likes": 0,
       "country": "spanien",
       "city": "alicante",
+      "image": "resa3.jpg"
+    },
+    {
+      "id": "1733238768743",
+      "title": "sdd",
+      "text": "aa",
+      "authorId": "1",
+      "comments": [],
+      "likes": 0,
+      "country": "aaa",
+      "city": "aa",
+      "image": "resa2.jpg"
+    },
+    {
+      "id": "1733239694343",
+      "title": "test",
+      "text": "testresa",
+      "authorId": "1",
+      "comments": [],
+      "likes": 0,
+      "country": "sweden",
+      "city": "boras",
+      "image": "resa3.jpg"
+    },
+    {
+      "id": "1733239762459",
+      "title": "saf",
+      "text": "saf",
+      "authorId": "3",
+      "comments": [],
+      "likes": 0,
+      "country": "sf",
+      "city": "asf",
       "image": "resa3.jpg"
     }
   ]

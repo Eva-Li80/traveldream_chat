@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { Post } from "../types/type";
-import { getPosts, updatePost } from "../travelApi/travelApi";
+import { getPosts } from "../travelApi/travelApi";
 
 type PostsState = {
   posts: Post[];
@@ -65,7 +65,7 @@ const postsSlice = createSlice({
       })
       .addCase(fetchPosts.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message || "Misslyckades att hämta inlägg";
+        state.error = action.error.message || "Error geting post";
       });
   },
 });

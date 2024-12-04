@@ -1,51 +1,70 @@
-import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import MyTabs from './tabNavigation';
+import Home from '../screens/Home';
+import Profile from '../screens/Profile';
+import AllPosts from '../screens/AllPosts';
+import NewPost from '../screens/NewPost';
+import Profiles from '../screens/Profiles';
 
-import AllPosts from "../screens/AllPosts";
-import PostDetails from "../screens/PostDetails";
-import { RootStackParamList } from "../types/type";
-import Home from "../screens/Home";
-import Profile from "../screens/Profile";
-import NewPost from "../screens/NewPost";
 
-const AllPostsStack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator();
 
-export default function StackNav() {
+const MyStack = () => {
   return (
-    <AllPostsStack.Navigator>
-      <AllPostsStack.Screen
-        name="AllPosts"
-        component={AllPosts}
+    <Stack.Navigator>
+      <Stack.Screen 
+        name="Tabs" 
+        component={MyTabs} 
+        options={{ headerShown: false }} 
+      />
+      <Stack.Screen 
+        name="Home" 
+        component={Home} 
         options={{
-          headerShown: false,
+          title: 'Home', 
+          headerBackVisible: true,
+          headerBackTitle: 'Back', 
         }}
       />
-      <AllPostsStack.Screen
-        name="PostDetails"
-        component={PostDetails}
-        options={{ title: "PostDetails" }}
-      />
-      <AllPostsStack.Screen
-        name="Home"
-        component={Home}
+      <Stack.Screen 
+        name="Profiles" 
+        component={Profiles} 
         options={{
-          title: "",
+          title: 'Profiles',
+          headerBackVisible: true,
+          headerBackTitle: 'Back', 
         }}
       />
-      <AllPostsStack.Screen
-        name="Profile"
-        component={Profile}
+       <Stack.Screen 
+        name="Profile" 
+        component={Profile} 
         options={{
-          title: "Profile",
+          title: 'Profile',
+          headerBackVisible: true,
+          headerBackTitle: 'Back', 
         }}
       />
-        <AllPostsStack.Screen
-        name="NewPost"
-        component={NewPost}
+       <Stack.Screen 
+        name="AllPosts" 
+        component={AllPosts} 
         options={{
-          title: "NewPost",
+          title: 'AllPosts',
+          headerBackVisible: true,
+          headerBackTitle: 'Back', 
         }}
       />
-    </AllPostsStack.Navigator>
+       <Stack.Screen 
+        name="NewPost" 
+        component={NewPost} 
+        options={{
+          title: 'NewPost',
+          headerBackVisible: true,
+          headerBackTitle: 'Back', 
+        }}
+      />
+    </Stack.Navigator>
   );
-}
+};
+
+export default MyStack;

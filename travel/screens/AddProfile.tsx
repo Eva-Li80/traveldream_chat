@@ -57,7 +57,7 @@ const AddProfile = () => {
   return (
     <>
       <ScrollView style={styles.container}>
-        <Text style={styles.txtimg}>Fill the inputs and choose picure</Text>
+        <Text style={styles.txtimg}>Fill in the inputs and choose picure</Text>
         <TextInput
           style={styles.input}
           placeholder="Name"

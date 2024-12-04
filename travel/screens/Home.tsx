@@ -8,21 +8,20 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../types/type";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../redux/store";
+import { RootStackParamList } from "../types/type";
 import { fetchUsers } from "../redux/userSlice";
 import imageMapping from "../utils/ImgMapping";
 import ButtonNavigate from "../components/buttons/ButtonNavigate";
-import img from "../assets/images/user2.jpg"
 
-type HomeScreenNavigationProp = NativeStackNavigationProp<
+type HomeNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
   "Home"
 >;
 
 type Props = {
-  navigation: HomeScreenNavigationProp;
+  navigation: HomeNavigationProp;
 };
 
 const Home = ({ navigation }: Props) => {
@@ -46,28 +45,22 @@ const Home = ({ navigation }: Props) => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scroll}>
-        <Text style={styles.welcomeText}>Travel dream chat... 
-        <Text style={styles.txt}>( from dream to journey )</Text>
-        </Text>
-        <Text style={styles.descriptionText}>An app where you can share your travel experiences, photos, tips and thoughts.
-          By sharing your experiences, others can gain a better understanding of them
-          places you visit. At the same time, you can preserve your own memories. Choose
-          if you want to share with others or keep the posts private.</Text>
+        <Text style={styles.welcomeText}>Travel dream chat.. ( from drem to journy )</Text>
         <View style={styles.imageRow}>
-
-            <View style={styles.imageContainer}>
+          {users.map((user) => (
+            <View style={styles.imageContainer} key={user.id}>
               <Image
-                style={styles.monsterImage}
-                source={imageMapping["user1.jpg"]}
+                style={styles.userImage}
+                source={imageMapping[user.avatar]}
               />
             </View>
-          
+          ))}
         </View>
       </ScrollView>
 
       <ButtonNavigate
         title="Choose profile"
-        navigate={() => navigation.navigate("Profile")}
+        navigate={() => navigation.navigate("Profiles")}
       />
     </View>
   );
@@ -84,28 +77,16 @@ const styles = StyleSheet.create({
 
   },
   welcomeText: {
-    fontSize: 33,
+    fontSize: 32,
     fontWeight: "bold",
     marginBottom: 30,
     textAlign: "center",
     marginTop: 20,
     color: "white",
     backgroundColor: "gray",
-    padding: 10,
+    padding: 20,
     borderWidth: 2,
     borderColor: "orange",
-    marginLeft: 15,
-    marginRight: 15
-  },
-  txt:{
-    fontSize: 22
-  },
-  descriptionText: {
-    fontSize: 18,
-    marginBottom: 20,
-    textAlign: "center",
-    paddingHorizontal: 15,
-    color: "gray",
   },
   imageRow: {
     flexDirection: "row",
@@ -119,7 +100,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     alignItems: "center",
   },
-  monsterImage: {
+  userImage: {
     width: 120,
     borderRadius: 75,
     resizeMode: "contain",
