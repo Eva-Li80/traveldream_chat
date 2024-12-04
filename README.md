@@ -1,6 +1,6 @@
 # traveldream_chat
 
-![Travel dream chat](resa.jpg)
+![Travel dream chat](public/assets//images/resa.jpg)
 
 
 ## - Beskrivning
