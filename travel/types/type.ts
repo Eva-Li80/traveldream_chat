@@ -31,8 +31,9 @@ export interface Comment {
 
   export type RootStackParamList = {
     AllPosts: { user: User | null };
-    PostDetails: {id: string}
+    PostDetails: { user: User | null };
     Home: undefined
     Profile: undefined
+    AddPosts: undefined
+    NewPost: undefined
   }
-  

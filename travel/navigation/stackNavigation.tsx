@@ -6,6 +6,7 @@ import PostDetails from "../screens/PostDetails";
 import { RootStackParamList } from "../types/type";
 import Home from "../screens/Home";
 import Profile from "../screens/Profile";
+import NewPost from "../screens/NewPost";
 
 const AllPostsStack = createNativeStackNavigator<RootStackParamList>();
 
@@ -22,7 +23,7 @@ export default function StackNav() {
       <AllPostsStack.Screen
         name="PostDetails"
         component={PostDetails}
-        options={{ title: "Rses Inlägg" }}
+        options={{ title: "PostDetails" }}
       />
       <AllPostsStack.Screen
         name="Home"
@@ -36,6 +37,13 @@ export default function StackNav() {
         component={Profile}
         options={{
           title: "Profile",
+        }}
+      />
+        <AllPostsStack.Screen
+        name="NewPost"
+        component={NewPost}
+        options={{
+          title: "NewPost",
         }}
       />
     </AllPostsStack.Navigator>

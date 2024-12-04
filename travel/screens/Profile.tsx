@@ -15,13 +15,13 @@ import { setActiveUser } from "../redux/userSlice";
 import imageMapping from "../utils/ImgMapping";
 
 
-type MonstersNavigationProp = NativeStackNavigationProp<
+type UsersNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
   "Profile"
 >;
 
 type Props = {
-  navigation: MonstersNavigationProp;
+  navigation: UsersNavigationProp;
 };
 
 const Profile = ({ navigation }: Props) => {
