@@ -70,12 +70,6 @@ const AddProfile = () => {
           value={email}
           onChangeText={setEmail}
         />
-        <TextInput
-          style={styles.input}
-          placeholder="Profile picture"
-          value={avatar}
-          onChangeText={setAvatar}
-        />
            <TextInput
           style={styles.input}
           placeholder="Country"
@@ -100,16 +94,26 @@ const AddProfile = () => {
         {avatar && (
           <Image source={imageMapping[avatar]} style={styles.selectedImage} />
         )}
-      </ScrollView>
       <ButtonNavigate title="Add Profile" navigate={handleAddUser} />
+      </ScrollView>
     </>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    padding: 40,
-    marginTop: 20,
+    backgroundColor: "#FFFFFF",
+    borderWidth: 2,
+    borderColor: "#CBD5E0",
+    marginVertical: 15, 
+    marginHorizontal: 15,
+    padding: 20,
+    borderRadius: 12,
+    shadowColor: "#000",
+    shadowOpacity: 0.2, 
+    shadowOffset: { width: 0, height: 8 }, 
+    shadowRadius: 8,
+    elevation: 10, 
   },
   input: {
     height: 40,
@@ -134,10 +138,10 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   txtimg: {
-    marginTop: 20,
+    marginTop: 50,
     fontSize: 20,
     fontWeight: "bold",
-    marginBottom: 30,
+    marginBottom: 50,
   },
 });
 

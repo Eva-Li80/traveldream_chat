@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   View,
   Text,
@@ -6,7 +6,8 @@ import {
   FlatList,
   TouchableOpacity,
   Pressable,
-  Image
+  Image,
+  Alert
 } from "react-native";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
@@ -27,11 +28,17 @@ const AllPosts = ({ navigation }: Props) => {
   const activeUser = useSelector((state: RootState) => state.users.activeUser);
   const posts = useSelector((state: RootState) => state.posts.posts);
 
+  
+  useEffect(() => {
+  if(!activeUser){
+    Alert.alert("Logg in by choosing a profile first, go to choose profile!")
+  }
+  },[activeUser])
   return (
     <View style={styles.container}>
       {activeUser ? (
       <View >
-         <Image style={{width: 80, height: 80, borderRadius: 50, borderWidth: 2, borderColor: "orange"}}
+         <Image style={{width: 80, height: 80, borderRadius: 50, borderWidth: 2, borderColor: "#FFC567"}}
             source={imageMapping[activeUser.avatar]}
           
           />
@@ -56,7 +63,7 @@ const AllPosts = ({ navigation }: Props) => {
         renderItem={({ item }) => (
           <View style={styles.post}>
             <Text style={styles.postAuthor}>{item.title}</Text>
-            <Text>{item.text}</Text>
+            <Text style={{color: "#2C3E50",}}>{item.text}</Text>
             <TouchableOpacity
               onPress={() => {
                 if (item) {
@@ -87,12 +94,13 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
+    color: "#2C3E50",
   },
   profile: {
     marginBottom: 70,
     marginRight: 0,
-    fontSize: 16,
-    color: "teal",
+    fontSize: 18,
+    color: "#1F8A8C",
     textDecorationLine: "underline",
     fontWeight: "bold",
   },
@@ -117,24 +125,32 @@ const styles = StyleSheet.create({
   userTitle: {
     fontSize: 20,
     marginBottom: 10,
+    color: "#2C3E50",
   },
   post: {
-    marginBottom: 15,
-    padding: 10,
-    borderWidth: 1,
-    borderColor: "teal",
-    borderRadius: 8,
+    backgroundColor: "#FFFFFF",
+    borderWidth: 2,
+    borderColor: "#CBD5E0",
+    marginVertical: 15, 
+    padding: 20,
+    borderRadius: 12,
+    shadowColor: "#000",
+    shadowOpacity: 0.2, 
+    shadowOffset: { width: 0, height: 8 }, 
+    shadowRadius: 8,
+    elevation: 10, 
   },
   postAuthor: {
     fontWeight: "bold",
-    fontSize: 20
+    fontSize: 20,
+    color:"#2C3E50"
   },
   info: {
     fontSize: 20,
     paddingTop: 10,
     textAlign: "right",
     paddingRight: 10,
-    color: "orange",
+    color: "#FFC567",
     textDecorationLine: "underline"
   },
 });

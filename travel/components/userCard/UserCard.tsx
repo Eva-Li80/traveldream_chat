@@ -12,12 +12,11 @@ type UserCardProps = {
 const UserCard = ({ name, email, avatar, country }: UserCardProps) => (
   <>
     <Card style={styles.card}>
-      <Card.Title title={`- ${name} - `} />
       <Card.Cover style={styles.image} source={avatar} />
       <Card.Content style={styles.content}>
-        <Text variant="bodyLarge">From: {country} </Text>
-        <Text variant="bodyLarge">Email: {email}</Text>
-        <Text style={styles.choose}>Choose {name} ⬆️</Text>
+        <Text style={{color: "#d3d3d3"}} variant="bodyLarge">From: {country} </Text>
+        <Text style={{color: "#d3d3d3"}} variant="bodyLarge">Email: {email}</Text>
+        <Text style={styles.choose}>{` - ${name} - `} ⬆️</Text>
       </Card.Content>
     </Card>
   </>
@@ -32,13 +31,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     minWidth: 300,
     padding: 10,
-    backgroundColor: "lightgray",
+    backgroundColor: "#2C3E50",
     borderWidth: 2,
-    borderColor: "orange",
+    borderColor: "#BDC3C7", 
   },
   image: {
     width: 200,
     height: 170,
+    marginTop: 10,
+    borderWidth: 1,
+    borderColor: "#BDC3C7",
+    resizeMode: "cover",
   },
   content: {
     marginTop: 10,
@@ -47,6 +50,7 @@ const styles = StyleSheet.create({
   choose: {
     textAlign: "center",
     marginTop: 20,
-    fontSize: 20
+    fontSize: 20,
+    color: "#FFC567"
   },
 });

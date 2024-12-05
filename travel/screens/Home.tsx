@@ -26,7 +26,7 @@ type Props = {
 
 const Home = ({ navigation }: Props) => {
   const dispatch = useDispatch<AppDispatch>();
-  const { users, loading, error } = useSelector(
+  const {loading, error } = useSelector(
     (state: RootState) => state.users
   );
 
@@ -45,10 +45,10 @@ const Home = ({ navigation }: Props) => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scroll}>
-        <Text style={styles.welcomeText}>Travel dream chat ! </Text>
         <View style={styles.con}>
         <Image style={styles.userImage} source={travelImageMapping["resa.jpg"]} />
-        <Text style={{color: "teal", fontSize: 20}}>from drem to journey..</Text>
+        <Text style={styles.welcomeText}>Travel dream chat ! </Text>
+        <Text style={{color: "teal", fontSize: 20,}}>from drem to journey..</Text>
          <Text style={styles.text}>En app där du kan dela upplevelser och platser du besökt med bilder, tankar och tips. Andra kan få inspiration och en bättre uppfattning om platserna, samtidigt som du sparar dina minnen. </Text>
         </View>
       </ScrollView>
@@ -73,27 +73,26 @@ const styles = StyleSheet.create({
     fontSize: 32,
     textAlign: "center",
     margin: 10,
-    color: "teal",
-    fontWeight: "bold",
+    color: "#2C3E50",
     paddingHorizontal: 20,
-    paddingVertical: 10,
+    paddingVertical: 5,
   },
   con: {
    alignContent: "center",
    alignItems: "center",
   },
   userImage: {
-    width: 360,
+    width: 375,
     resizeMode: "cover",
     backgroundColor: "white",
-    height: "95%",
+    height: "98%",
     margin: 10,
     paddingLeft: 100
   },
   text:{
     fontSize: 16,
     textAlign: 'center',
-    color: '#333',
+    color: "#2C3E50",
     marginTop: 10
   },
 });

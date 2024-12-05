@@ -1,5 +1,5 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   View,
   Text,
@@ -8,11 +8,12 @@ import {
   Image,
   FlatList,
   ActivityIndicator,
+  Alert,
 } from "react-native";
 import { RouteProp, useRoute } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../redux/store";
-import { fetchPosts, addLike, addComment } from "../redux/postSlice";
+import { fetchPosts} from "../redux/postSlice";
 import { RootStackParamList } from "../types/type";
 import imageMapping from "../utils/ImgMapping";
 import postImageMapping from "../utils/postImgMappinf";
@@ -34,11 +35,15 @@ const Profile = ({ navigation }: Props) => {
   );
 
   const route = useRoute<UserRouteProp>();
-  const { user } = route.params;
+  const { user } = route.params || {};
 
   useEffect(() => {
+    
     if (user) {
       dispatch(fetchPosts());
+    }
+    else{
+      Alert.alert("Logg in by choosing a profile first, go to choose profile!")
     }
   }, [user, dispatch]);
 
@@ -54,7 +59,7 @@ const Profile = ({ navigation }: Props) => {
     <FlatList style={styles.container}
       ListHeaderComponent={() => (
         <View>
-          <View style={styles.con}>
+          <View style={styles.contitle}>
             <Text style={styles.title}>Welcome {user?.name}</Text>
             <Pressable onPress={() => navigation.navigate("NewPost")}>
               <Text style={styles.postnew}>add a new post ➕</Text>
@@ -66,7 +71,7 @@ const Profile = ({ navigation }: Props) => {
               source={imageMapping[user?.avatar]}
             />
           )}
-          <Text> your posts..</Text>
+          <Text style={{color: "#2C3E50"}}> your posts..</Text>
         </View>
       )}
       data={posts.filter((post) => String(post.authorId) === user?.id)}
@@ -89,7 +94,6 @@ const Profile = ({ navigation }: Props) => {
             )}
             nestedScrollEnabled
           />
-          
         </View>
       )}
     />
@@ -97,16 +101,29 @@ const Profile = ({ navigation }: Props) => {
 };
 
 const styles = StyleSheet.create({
-  con: {
+  contitle: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
- 
     padding: 10,
+  },
+  con:{
+    backgroundColor: "#FFFFFF",
+    borderWidth: 2,
+    borderColor: "#CBD5E0",
+    marginVertical: 15, 
+    marginHorizontal: 15,
+    padding: 20,
+    borderRadius: 12,
+    shadowColor: "#000",
+    shadowOpacity: 0.2, 
+    shadowOffset: { width: 0, height: 8 }, 
+    shadowRadius: 8,
+    elevation: 10, 
   },
   postnew: {
     fontSize: 18,
-    color: "teal",
+    color: "#1F8A8C",
     textDecorationLine: "underline",
     fontWeight: "bold",
   },
@@ -114,9 +131,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 2,
     fontSize: 18,
+    color:  "#2C3E50",
   },
   container: {
     padding: 20,
+    backgroundColor: "#f4f4f4",
   },
   postImage: {
     maxWidth: "50%",
@@ -128,43 +147,48 @@ const styles = StyleSheet.create({
     maxWidth: 120,
     height: 120,
     borderRadius: 30,
-    borderWidth: 3,
-    borderColor: "teal",
+    borderWidth: 2,
+    borderColor: "#CBD5E0",
     marginLeft: 10,
     marginBottom: 25,
+    shadowColor: "#000",
+    shadowOpacity: 0.2, 
+    shadowOffset: { width: 0, height: 8 }, 
+    shadowRadius: 8,
+    elevation: 10, 
   },
   post: {
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#FFFFFF",
     borderWidth: 2,
-    borderColor: "orange",
-    marginVertical: 10,
-    padding: 15,
-    borderRadius: 10,
+    borderColor: "#CBD5E0",
+    marginVertical: 15, 
+    padding: 20,
+    borderRadius: 12,
     shadowColor: "#000",
-    shadowOpacity: 0.1,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 5,
-    elevation: 3,
+    shadowOpacity: 0.2, 
+    shadowOffset: { width: 0, height: 8 }, 
+    shadowRadius: 8,
+    elevation: 10, 
   },
   postTitle: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
-    color: "#333",
+    color:  "#2C3E50",
   },
   postContent: {
     fontSize: 16,
-    color: "#666",
+    color:  "#2C3E50",
     marginBottom: 10,
   },
   likeButton: {
-    fontSize: 14,
+    fontSize: 18,
     color: "teal",
     marginBottom: 10,
   },
   comment: {
-    fontSize: 14,
-    color: "#444",
+    fontSize: 16,
+    color:  "#2C3E50",
     marginLeft: 10,
     marginBottom: 5,
   },

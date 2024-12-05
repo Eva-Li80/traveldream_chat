@@ -14,8 +14,8 @@ const MyTabs = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        tabBarActiveTintColor: "teal",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: "#2C3E50",
+        tabBarInactiveTintColor: "gray", 
         tabBarIcon: ({ color, size }) => {
           let icon;
           switch (route.name) {

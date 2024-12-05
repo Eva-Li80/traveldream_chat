@@ -102,8 +102,6 @@ const NewPost = () => {
             </TouchableOpacity>
           ))}
         </ScrollView>
-
-
         {image && (
           <Image source={postImageMapping[image]} style={styles.selectedImage} />
         )}
@@ -115,9 +113,18 @@ const NewPost = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: "#FFFFFF",
+    borderWidth: 2,
+    borderColor: "#CBD5E0",
+    marginVertical: 20, 
+    marginHorizontal: 15,
     padding: 20,
-    backgroundColor: '#f1f1f1',
+    borderRadius: 12,
+    shadowColor: "#000",
+    shadowOpacity: 0.2, 
+    shadowOffset: { width: 0, height: 8 }, 
+    shadowRadius: 8,
+    elevation: 10, 
   },
   title: {
     fontSize: 26,

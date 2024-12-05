@@ -55,6 +55,20 @@
       "email": "sara@example.com",
       "avatar": "user8.jpg",
       "country": "France"
+    },
+    {
+      "id": "27ed",
+      "name": "test",
+      "email": "test",
+      "avatar": "user5.jpg",
+      "country": "test"
+    },
+    {
+      "id": "ab1c",
+      "name": "asd",
+      "email": "as",
+      "avatar": "user8.jpg",
+      "country": "asd"
     }
   ],
   "posts": [
@@ -63,7 +77,7 @@
       "title": "An adventure in the forest",
       "text": "I found a strange tree that seemed to be alive!",
       "authorId": "1",
-      "likes": 0,
+      "likes": 2,
       "country": "Sweden",
       "city": "Stockholm",
       "image": "resa1.jpg",
@@ -77,6 +91,16 @@
           "id": "2",
           "text": "Be careful next time!",
           "authorId": "5"
+        },
+        {
+          "text": "test",
+          "authorId": "unknown-author",
+          "id": "3"
+        },
+        {
+          "text": "adahhh",
+          "authorId": "unknown-author",
+          "id": "4"
         }
       ]
     },
@@ -225,15 +249,59 @@
       ]
     },
     {
-      "id": "1733323998445",
-      "title": "sdfdf",
-      "text": "dsfsdf",
+      "id": "1733389444099",
+      "title": "test",
+      "text": "test",
       "authorId": "1",
       "comments": [],
       "likes": 0,
-      "country": "sdfsd",
-      "city": "sdfds",
-      "image": "resa5.jpg"
+      "country": "sweden",
+      "city": "alingsas",
+      "image": "resa3.jpg"
+    },
+    {
+      "id": "1733396367847",
+      "title": "ada",
+      "text": "ad",
+      "authorId": "1",
+      "comments": [],
+      "likes": 0,
+      "country": "asd",
+      "city": "asd",
+      "image": "resa2.jpg"
+    },
+    {
+      "id": "1733397361931",
+      "title": "adad",
+      "text": "asdads",
+      "authorId": "1",
+      "comments": [],
+      "likes": 0,
+      "country": "adsa",
+      "city": "ad",
+      "image": "resa3.jpg"
+    },
+    {
+      "id": "1733397387981",
+      "title": "adas",
+      "text": "ada",
+      "authorId": "2",
+      "comments": [],
+      "likes": 2,
+      "country": "asd",
+      "city": "asd",
+      "image": "resa2.jpg"
+    },
+    {
+      "id": "1733397815298",
+      "title": "ada",
+      "text": "adsa",
+      "authorId": "2",
+      "comments": [],
+      "likes": 0,
+      "country": "asd",
+      "city": "asd",
+      "image": "resa4.jpg"
     }
   ]
 }

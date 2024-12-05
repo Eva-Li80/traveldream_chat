@@ -19,18 +19,20 @@ const Button = ({ title, onPress}: ButtonProps) => {
 const styles = StyleSheet.create({
   container: {           
     alignItems: 'center',
+    marginTop: 30
 },
 button: {
       paddingHorizontal: 30,
       paddingVertical: 10,
-    backgroundColor: "orange", 
+      backgroundColor:  "#FFC567" , 
     borderRadius: 5,
     alignItems: "center",
     borderWidth: 2,
-    borderColor: "teal",
+     borderColor: "#2C3E50"
   },
   text: {
-    color: "white",
+    color: "#2C3E50",
+    fontWeight: "bold",
     fontSize: 20,
   },
 });

@@ -36,7 +36,7 @@ const ChooseProfile = ({ navigation }: Props) => {
   return (
     <ScrollView>
       <View style={styles.con}>
-        <Text style={styles.title}>Choose profile</Text>
+        <Text style={styles.title}>Choose profile..</Text>
        <Pressable
         onPress={() => {
           navigation.navigate("AddProfile");
@@ -49,9 +49,7 @@ const ChooseProfile = ({ navigation }: Props) => {
         <View>
           {users.map((user) => (
             <TouchableOpacity key={user.id} onPress={() => handleUser(user)}>
-    
               <UserCard name={user.name} email={user.email} avatar={imageMapping[user.avatar]} country={user.country}/>
-
             </TouchableOpacity>
           ))}
         </View>
@@ -71,12 +69,10 @@ const styles = StyleSheet.create({
   marginBottom: 40,
   marginRight: 10,
   fontSize: 18,
-  color: "teal",
-  textDecorationLine: "underline",
+  color: "#1F8A8C",
   fontWeight: "bold"
   },
   container: {
-    flex: 2,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
@@ -94,7 +90,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBottom: 5,
     marginLeft: 50,
-    color: "orange"
+    color: "#4A6572",
   },
 });
 
