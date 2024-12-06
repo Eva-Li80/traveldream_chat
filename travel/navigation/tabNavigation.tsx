@@ -5,7 +5,7 @@ import Profile from "../screens/Profile";
 import AllPosts from "../screens/AllPosts";
 import AddProfile from "../screens/AddProfile";
 import ChooseProfile from "../screens/ChooseProfile";
-import { faHome, faList, faPlusCircle, faUser, faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faList, faPlusCircle, faUser, faUserCircle, faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 
 const Tab = createBottomTabNavigator();
@@ -34,6 +34,9 @@ const MyTabs = () => {
             case "AllPosts":
               icon = faList;
               break;
+              case "ChooseProfile":
+                icon = faUserCircle;
+                break;
             default:
               icon = faHome;
           }

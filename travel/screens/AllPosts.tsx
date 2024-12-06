@@ -5,9 +5,8 @@ import {
   StyleSheet,
   FlatList,
   TouchableOpacity,
-  Pressable,
   Image,
-  Alert
+  Alert,
 } from "react-native";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
@@ -27,30 +26,28 @@ type Props = {
 const AllPosts = ({ navigation }: Props) => {
   const activeUser = useSelector((state: RootState) => state.users.activeUser);
   const posts = useSelector((state: RootState) => state.posts.posts);
+  const users = useSelector((state: RootState) => state.users.users);
 
-  
+  const getUserNameById = (id: string) => {
+    const user = users.find((u) => u.id === id);
+    return user ? user.name : "Unknown";
+  };
+
   useEffect(() => {
-  if(!activeUser){
-    Alert.alert("Logg in by choosing a profile first, go to choose profile!")
-  }
-  },[activeUser])
+    if (!activeUser) {
+      Alert.alert("Logg in by choosing a profile first, go to choose profile!");
+    }
+  }, [activeUser]);
   return (
     <View style={styles.container}>
       {activeUser ? (
-      <View >
-         <Image style={{width: 80, height: 80, borderRadius: 50, borderWidth: 2, borderColor: "#FFC567"}}
-            source={imageMapping[activeUser.avatar]}
-          
-          />
+        <View>
           <View style={styles.con}>
-            <Text style={styles.title}> all users posts..</Text>
-            <Pressable
-              onPress={() => {
-                navigation.navigate("AddProfile");
-              }}
-            >
-              <Text style={styles.profile}>add a new post ➕</Text>
-            </Pressable>
+            <Image
+              style={styles.img}
+              source={imageMapping[activeUser.avatar]}
+            />
+            <Text style={styles.title}> All users posts..</Text>
           </View>
         </View>
       ) : (
@@ -63,7 +60,7 @@ const AllPosts = ({ navigation }: Props) => {
         renderItem={({ item }) => (
           <View style={styles.post}>
             <Text style={styles.postAuthor}>{item.title}</Text>
-            <Text style={{color: "#2C3E50",}}>{item.text}</Text>
+            <Text style={{ color: "#2C3E50" }}>{item.text}</Text>
             <TouchableOpacity
               onPress={() => {
                 if (item) {
@@ -75,6 +72,7 @@ const AllPosts = ({ navigation }: Props) => {
             >
               <Text style={styles.info}>see post..</Text>
             </TouchableOpacity>
+            <Text>By: {getUserNameById(item.authorId)}</Text>
           </View>
         )}
       />
@@ -85,19 +83,32 @@ const AllPosts = ({ navigation }: Props) => {
 const styles = StyleSheet.create({
   con: {
     flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    justifyContent: "space-around",
+    alignItems:"flex-end",
   },
   title: {
     textAlign: "center",
-    marginTop: 60,
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: "bold",
     marginBottom: 10,
     color: "#2C3E50",
   },
+  img: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    borderWidth: 2,
+    borderColor: "#FFC567",
+    marginBottom: 25,
+    marginTop: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.2,
+    shadowOffset: { width: 0, height: 8 },
+    shadowRadius: 8,
+    elevation: 10,
+  },
   profile: {
-    marginBottom: 70,
+    marginBottom: 50,
     marginRight: 0,
     fontSize: 18,
     color: "#1F8A8C",
@@ -131,19 +142,19 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFFFFF",
     borderWidth: 2,
     borderColor: "#CBD5E0",
-    marginVertical: 15, 
+    marginVertical: 15,
     padding: 20,
     borderRadius: 12,
     shadowColor: "#000",
-    shadowOpacity: 0.2, 
-    shadowOffset: { width: 0, height: 8 }, 
+    shadowOpacity: 0.2,
+    shadowOffset: { width: 0, height: 8 },
     shadowRadius: 8,
-    elevation: 10, 
+    elevation: 10,
   },
   postAuthor: {
     fontWeight: "bold",
     fontSize: 20,
-    color:"#2C3E50"
+    color: "#2C3E50",
   },
   info: {
     fontSize: 20,
@@ -151,7 +162,7 @@ const styles = StyleSheet.create({
     textAlign: "right",
     paddingRight: 10,
     color: "#FFC567",
-    textDecorationLine: "underline"
+    textDecorationLine: "underline",
   },
 });
 

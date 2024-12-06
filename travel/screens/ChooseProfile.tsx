@@ -62,11 +62,10 @@ const styles = StyleSheet.create({
   con:{
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center', 
-    padding: 10,
+    padding: 0,
   },
   profile:{
-  marginBottom: 40,
+  marginTop: 20,
   marginRight: 10,
   fontSize: 18,
   color: "#1F8A8C",
@@ -84,12 +83,10 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   title: {
-    textAlign: "center",
     marginTop: 60,
-    fontSize: 18,
-    fontWeight: "bold",
+    fontSize: 20,
     marginBottom: 5,
-    marginLeft: 50,
+    marginLeft: 55,
     color: "#4A6572",
   },
 });

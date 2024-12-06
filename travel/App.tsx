@@ -4,6 +4,8 @@ import { store } from "./redux/store";
 import { NavigationContainer } from "@react-navigation/native";
 import MyStack from "./navigation/stackNavigation";
 
+//för navigering , redux och gester
+
 export default function App() {
   return (
     <GestureHandlerRootView>

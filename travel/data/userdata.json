@@ -57,27 +57,20 @@
       "country": "France"
     },
     {
-      "id": "27ed",
+      "id": "60da",
       "name": "test",
       "email": "test",
-      "avatar": "user5.jpg",
+      "avatar": "user3.jpg",
       "country": "test"
-    },
-    {
-      "id": "ab1c",
-      "name": "asd",
-      "email": "as",
-      "avatar": "user8.jpg",
-      "country": "asd"
     }
   ],
   "posts": [
     {
       "id": "1",
       "title": "An adventure in the forest",
-      "text": "I found a strange tree that seemed to be alive!",
+      "text": "I found a strange tree that seemed to be alive! The tree had intricate carvings that I had never seen before, and it was glowing in the moonlight. I wonder what secrets it holds.",
       "authorId": "1",
-      "likes": 2,
+      "likes": 12,
       "country": "Sweden",
       "city": "Stockholm",
       "image": "resa1.jpg",
@@ -93,23 +86,53 @@
           "authorId": "5"
         },
         {
-          "text": "test",
+          "text": "Wow",
           "authorId": "unknown-author",
           "id": "3"
         },
         {
-          "text": "adahhh",
+          "text": "hej",
           "authorId": "unknown-author",
           "id": "4"
+        },
+        {
+          "text": "test",
+          "authorId": "unknown-author",
+          "id": "5"
+        },
+        {
+          "text": "test",
+          "authorId": "unknown-author",
+          "id": "6"
+        },
+        {
+          "id": "1733491551821",
+          "text": "test",
+          "authorId": "2"
+        },
+        {
+          "id": "1733492309089",
+          "text": "adad",
+          "authorId": "2"
+        },
+        {
+          "id": "1733492480872",
+          "text": "hjdaskh",
+          "authorId": "2"
+        },
+        {
+          "id": "1733492935652",
+          "text": "test",
+          "authorId": "2"
         }
       ]
     },
     {
       "id": "2",
       "title": "A sea full of colors",
-      "text": "The sea shifted in the colors of the rainbow today. Magical!",
+      "text": "The sea shifted in the colors of the rainbow today. Magical! I could see the waves sparkling as if they were filled with diamonds. It was truly a sight to behold.",
       "authorId": "1",
-      "likes": 0,
+      "likes": 8,
       "country": "Denmark",
       "city": "Copenhagen",
       "image": "resa2.jpg",
@@ -118,15 +141,25 @@
           "id": "3",
           "text": "I must see it myself sometime!",
           "authorId": "4"
+        },
+        {
+          "id": "1733491890352",
+          "text": "hej",
+          "authorId": "4"
+        },
+        {
+          "id": "1733492052052",
+          "text": "test",
+          "authorId": "4"
         }
       ]
     },
     {
       "id": "3",
       "title": "My thoughts on food",
-      "text": "I love eating, but nothing beats a good insect pie.",
+      "text": "I love eating, but nothing beats a good insect pie. I tried a new recipe with grasshoppers and crickets. The flavor was surprisingly delightful, and the texture was crispy.",
       "authorId": "3",
-      "likes": 0,
+      "likes": 1,
       "country": "Norway",
       "city": "Oslo",
       "image": "resa3.jpg",
@@ -146,7 +179,7 @@
     {
       "id": "4",
       "title": "The barrier is failing",
-      "text": "I feel vibrations in the barrier. Something is happening.",
+      "text": "I feel vibrations in the barrier. Something is happening. The atmosphere around me is growing heavier, and I hear strange noises echoing from the other side.",
       "authorId": "4",
       "likes": 0,
       "country": "Finland",
@@ -173,9 +206,9 @@
     {
       "id": "5",
       "title": "New friends",
-      "text": "I met two little birds that helped me today.",
+      "text": "I met two little birds that helped me today. They flew alongside me and even guided me to a hidden spot in the forest where I discovered a secret garden.",
       "authorId": "5",
-      "likes": 0,
+      "likes": 4,
       "country": "Iceland",
       "city": "Reykjavik",
       "image": "resa5.jpg",
@@ -184,15 +217,20 @@
           "id": "9",
           "text": "Birds are amazing! What did they do?",
           "authorId": "7"
+        },
+        {
+          "id": "1733492522308",
+          "text": "adas",
+          "authorId": "1"
         }
       ]
     },
     {
       "id": "6",
       "title": "The full moon",
-      "text": "Under the full moon, I get extra creative. Today I painted a masterpiece.",
+      "text": "Under the full moon, I get extra creative. Today I painted a masterpiece. The moonlight inspired me to use colors I’ve never tried before, and the result was mesmerizing.",
       "authorId": "6",
-      "likes": 0,
+      "likes": 1,
       "country": "Norway",
       "city": "Bergen",
       "image": "resa6.jpg",
@@ -212,9 +250,9 @@
     {
       "id": "7",
       "title": "Discovery in the mountains",
-      "text": "There is a cave here that no one has seen before!",
+      "text": "There is a cave here that no one has seen before! Inside, I found ancient paintings on the walls that tell the story of a forgotten civilization.",
       "authorId": "7",
-      "likes": 0,
+      "likes": 1,
       "country": "United Kingdom",
       "city": "London",
       "image": "resa7.jpg",
@@ -228,13 +266,18 @@
           "id": "13",
           "text": "Be careful, it might be dangerous.",
           "authorId": "2"
+        },
+        {
+          "text": "nice",
+          "authorId": "unknown-author",
+          "id": "14"
         }
       ]
     },
     {
       "id": "8",
       "title": "A secret recipe",
-      "text": "I found a recipe for the best soup I've ever tasted.",
+      "text": "I found a recipe for the best soup I've ever tasted. The ingredients are simple, yet the flavor is out of this world, with a perfect balance of savory and spicy.",
       "authorId": "8",
       "likes": 0,
       "country": "France",
@@ -249,59 +292,26 @@
       ]
     },
     {
-      "id": "1733389444099",
+      "id": "1733490631720",
       "title": "test",
       "text": "test",
       "authorId": "1",
       "comments": [],
       "likes": 0,
-      "country": "sweden",
-      "city": "alingsas",
-      "image": "resa3.jpg"
+      "country": "test",
+      "city": "tets",
+      "image": "resa5.jpg"
     },
     {
-      "id": "1733396367847",
-      "title": "ada",
-      "text": "ad",
-      "authorId": "1",
-      "comments": [],
-      "likes": 0,
-      "country": "asd",
-      "city": "asd",
-      "image": "resa2.jpg"
-    },
-    {
-      "id": "1733397361931",
-      "title": "adad",
-      "text": "asdads",
-      "authorId": "1",
-      "comments": [],
-      "likes": 0,
-      "country": "adsa",
-      "city": "ad",
-      "image": "resa3.jpg"
-    },
-    {
-      "id": "1733397387981",
-      "title": "adas",
+      "id": "1733492286605",
+      "title": "tst",
       "text": "ada",
       "authorId": "2",
       "comments": [],
-      "likes": 2,
-      "country": "asd",
-      "city": "asd",
-      "image": "resa2.jpg"
-    },
-    {
-      "id": "1733397815298",
-      "title": "ada",
-      "text": "adsa",
-      "authorId": "2",
-      "comments": [],
       "likes": 0,
-      "country": "asd",
-      "city": "asd",
-      "image": "resa4.jpg"
+      "country": "ad",
+      "city": "ad",
+      "image": "resa3.jpg"
     }
   ]
 }

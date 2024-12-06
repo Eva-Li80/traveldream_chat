@@ -24,11 +24,6 @@ export interface User {
   country: string;
 }
 
-export interface Data {
-  users: User[];
-  posts: Post[];
-}
-
 export type RootStackParamList = {
   Home: undefined
   Profiles: undefined

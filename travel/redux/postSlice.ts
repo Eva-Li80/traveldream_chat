@@ -1,8 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { Post } from "../types/type";
-import { addPoster, getPosts, updatePost } from "../travelApi/travelApi";
-import { addLogBoxLog } from "react-native-reanimated/lib/typescript/logger";
-import { updateUser } from "./userSlice";
+import { getPosts, updatePost } from "../travelApi/travelApi";
 
 type PostsState = {
   posts: Post[];
@@ -32,47 +30,7 @@ const postsSlice = createSlice({
     addPost(state, action: PayloadAction<Post>) {
       state.posts.push(action.payload);
     },
-    addLike(state, action: PayloadAction<string>) {
-      const post = state.posts.find(post => post.id === action.payload);
-      if (post) {
-        post.likes += 1;
-    
-        updatePost(post) 
-          .then(updatedPost => {
-            const index = state.posts.findIndex(p => p.id === updatedPost.id);
-            if (index !== -1) {
-              state.posts[index] = updatedPost;
-            }
-          })
-          .catch((error) => {
-            console.error('Error updating post:', error);
-          });
-      } else {
-        console.error('Post not found!');
-      }
-    },
-    addComment(state, action: PayloadAction<{ postId: string; comment: { text: string; authorId: string } }>) {
-      const { postId, comment } = action.payload;
-      const post = state.posts.find(post => post.id === postId);
-      if (post) {
-        const commentId = (post.comments.length ? parseInt(post.comments[post.comments.length - 1].id) + 1 : 1).toString();
-        post.comments.push({ ...comment, id: commentId });
-    
-        updatePost(post)  
-          .then(updatedPost => {
-            const index = state.posts.findIndex(p => p.id === updatedPost.id);
-            if (index !== -1) {
-              state.posts[index] = updatedPost;
-            }
-          })
-          .catch((error) => {
-            console.error('Error updating post:', error);
-          });
-      } else {
-        console.error('Post not found!');
-      }
-    },
-      
+   
     setLoading(state, action: PayloadAction<boolean>) {
       state.loading = action.payload;
     },
@@ -92,10 +50,10 @@ const postsSlice = createSlice({
       })
       .addCase(fetchPosts.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message || "Error geting post";
+        state.error = action.error.message || "Error getting post";
       });
   },
 });
 
-export const { addPost, addLike, addComment, setLoading, setError } = postsSlice.actions;
+export const { addPost,setLoading, setError } = postsSlice.actions;
 export default postsSlice.reducer;

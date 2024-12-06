@@ -3,6 +3,8 @@ import { Post } from "../types/type";
 const API_URL_USERS = 'http://10.0.2.2:3001/users';
 const API_URL_POST = 'http://10.0.2.2:3001/posts';
 
+//api för attt i detta fallet hantera data från/ till json server
+
 export const getUsers = async () => {
   try {
     const response = await fetch(API_URL_USERS); 
