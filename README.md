@@ -21,17 +21,20 @@ git clone https://github.com/Eva-Li80/traveldream_chat.git
 
 ```bash
 cd traveldream_chat
+cd travel
 npm install
 
 ```
-3. starta server
+3. starta emulatorn
+
+4. starta server
 
 ```bash
 json-server --watch data/userdata.json --port 3001
 
 ```
 
-4. starta appen 
+5. starta appen 
 
 ```bash
 npx expo start
@@ -49,4 +52,4 @@ npx expo start
 - Typescript
 - Redux toolkit
 
-### Av: Eva-Li Nätynki Bodén  Datum:
+### Av: Eva-Li Nätynki Bodén  Datum:2024-12-08

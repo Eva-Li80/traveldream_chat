@@ -43,24 +43,10 @@
       "country": "Norway"
     },
     {
-      "id": "7",
-      "name": "Kelly",
-      "email": "kelly@example.com",
-      "avatar": "user7.jpg",
-      "country": "United Kingdom"
-    },
-    {
-      "id": "8",
-      "name": "Sara",
-      "email": "sara@example.com",
-      "avatar": "user8.jpg",
-      "country": "France"
-    },
-    {
-      "id": "60da",
+      "id": "f2d0",
       "name": "test",
       "email": "test",
-      "avatar": "user3.jpg",
+      "avatar": "user8.jpg",
       "country": "test"
     }
   ],
@@ -84,46 +70,6 @@
           "id": "2",
           "text": "Be careful next time!",
           "authorId": "5"
-        },
-        {
-          "text": "Wow",
-          "authorId": "unknown-author",
-          "id": "3"
-        },
-        {
-          "text": "hej",
-          "authorId": "unknown-author",
-          "id": "4"
-        },
-        {
-          "text": "test",
-          "authorId": "unknown-author",
-          "id": "5"
-        },
-        {
-          "text": "test",
-          "authorId": "unknown-author",
-          "id": "6"
-        },
-        {
-          "id": "1733491551821",
-          "text": "test",
-          "authorId": "2"
-        },
-        {
-          "id": "1733492309089",
-          "text": "adad",
-          "authorId": "2"
-        },
-        {
-          "id": "1733492480872",
-          "text": "hjdaskh",
-          "authorId": "2"
-        },
-        {
-          "id": "1733492935652",
-          "text": "test",
-          "authorId": "2"
         }
       ]
     },
@@ -132,7 +78,7 @@
       "title": "A sea full of colors",
       "text": "The sea shifted in the colors of the rainbow today. Magical! I could see the waves sparkling as if they were filled with diamonds. It was truly a sight to behold.",
       "authorId": "1",
-      "likes": 8,
+      "likes": 9,
       "country": "Denmark",
       "city": "Copenhagen",
       "image": "resa2.jpg",
@@ -145,11 +91,6 @@
         {
           "id": "1733491890352",
           "text": "hej",
-          "authorId": "4"
-        },
-        {
-          "id": "1733492052052",
-          "text": "test",
           "authorId": "4"
         }
       ]
@@ -181,7 +122,7 @@
       "title": "The barrier is failing",
       "text": "I feel vibrations in the barrier. Something is happening. The atmosphere around me is growing heavier, and I hear strange noises echoing from the other side.",
       "authorId": "4",
-      "likes": 0,
+      "likes": 1,
       "country": "Finland",
       "city": "Helsinki",
       "image": "resa4.jpg",
@@ -200,6 +141,11 @@
           "id": "8",
           "text": "I can help if you need.",
           "authorId": "9"
+        },
+        {
+          "id": "1733655867790",
+          "text": "wow",
+          "authorId": "1"
         }
       ]
     },
@@ -217,11 +163,6 @@
           "id": "9",
           "text": "Birds are amazing! What did they do?",
           "authorId": "7"
-        },
-        {
-          "id": "1733492522308",
-          "text": "adas",
-          "authorId": "1"
         }
       ]
     },
@@ -248,70 +189,26 @@
       ]
     },
     {
-      "id": "7",
-      "title": "Discovery in the mountains",
-      "text": "There is a cave here that no one has seen before! Inside, I found ancient paintings on the walls that tell the story of a forgotten civilization.",
-      "authorId": "7",
-      "likes": 1,
-      "country": "United Kingdom",
-      "city": "London",
-      "image": "resa7.jpg",
-      "comments": [
-        {
-          "id": "12",
-          "text": "We have to explore it together!",
-          "authorId": "4"
-        },
-        {
-          "id": "13",
-          "text": "Be careful, it might be dangerous.",
-          "authorId": "2"
-        },
-        {
-          "text": "nice",
-          "authorId": "unknown-author",
-          "id": "14"
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "title": "A secret recipe",
-      "text": "I found a recipe for the best soup I've ever tasted. The ingredients are simple, yet the flavor is out of this world, with a perfect balance of savory and spicy.",
-      "authorId": "8",
-      "likes": 0,
-      "country": "France",
-      "city": "Paris",
-      "image": "resa8.jpg",
-      "comments": [
-        {
-          "id": "14",
-          "text": "Share the recipe, please!",
-          "authorId": "6"
-        }
-      ]
-    },
-    {
-      "id": "1733490631720",
+      "id": "1733655741020",
       "title": "test",
       "text": "test",
       "authorId": "1",
       "comments": [],
       "likes": 0,
       "country": "test",
-      "city": "tets",
-      "image": "resa5.jpg"
+      "city": "test",
+      "image": "resa1.jpg"
     },
     {
-      "id": "1733492286605",
-      "title": "tst",
-      "text": "ada",
-      "authorId": "2",
+      "id": "1733655779523",
+      "title": "test",
+      "text": "test",
+      "authorId": "1",
       "comments": [],
       "likes": 0,
-      "country": "ad",
-      "city": "ad",
-      "image": "resa3.jpg"
+      "country": "test",
+      "city": "test",
+      "image": "resa5.jpg"
     }
   ]
 }

@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import { Post } from "../types/type";
-import { getPosts, updatePost } from "../travelApi/travelApi";
+import { getPosts } from "../travelApi/travelApi";
 
 type PostsState = {
   posts: Post[];
@@ -30,13 +30,6 @@ const postsSlice = createSlice({
     addPost(state, action: PayloadAction<Post>) {
       state.posts.push(action.payload);
     },
-   
-    setLoading(state, action: PayloadAction<boolean>) {
-      state.loading = action.payload;
-    },
-    setError(state, action: PayloadAction<string>) {
-      state.error = action.payload;
-    },
   },
   extraReducers: (builder) => {
     builder
@@ -55,5 +48,5 @@ const postsSlice = createSlice({
   },
 });
 
-export const { addPost,setLoading, setError } = postsSlice.actions;
+export const { addPost,} = postsSlice.actions;
 export default postsSlice.reducer;
