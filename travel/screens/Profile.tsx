@@ -83,6 +83,7 @@ const Profile = ({ navigation }: Props) => {
       renderItem={({ item }) => (
         <View style={styles.post}>
           <Text style={styles.postTitle}>{item.title}</Text>
+          <Text style={styles.postTitle}>{item.country} (city: {item.city} )</Text>
           <View style={styles.conpost}>
             <Image
               source={postImageMapping[item.image]}

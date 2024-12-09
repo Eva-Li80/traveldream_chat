@@ -33,21 +33,14 @@
       "name": "Kalle",
       "email": "kalle@example.com",
       "avatar": "user5.jpg",
-      "country": "Iceland"
+      "country": "Spain"
     },
     {
       "id": "6",
       "name": "Stina",
       "email": "stina@example.com",
       "avatar": "user6.jpg",
-      "country": "Norway"
-    },
-    {
-      "id": "f2d0",
-      "name": "test",
-      "email": "test",
-      "avatar": "user8.jpg",
-      "country": "test"
+      "country": "Usa"
     }
   ],
   "posts": [
@@ -56,14 +49,14 @@
       "title": "An adventure in the forest",
       "text": "I found a strange tree that seemed to be alive! The tree had intricate carvings that I had never seen before, and it was glowing in the moonlight. I wonder what secrets it holds.",
       "authorId": "1",
-      "likes": 12,
-      "country": "Sweden",
-      "city": "Stockholm",
+      "likes": 13,
+      "country": "Germany",
+      "city": "Berlin",
       "image": "resa1.jpg",
       "comments": [
         {
           "id": "1",
-          "text": "Sounds exciting, which tree was it?",
+          "text": "Sounds exciting!",
           "authorId": "2"
         },
         {
@@ -78,9 +71,9 @@
       "title": "A sea full of colors",
       "text": "The sea shifted in the colors of the rainbow today. Magical! I could see the waves sparkling as if they were filled with diamonds. It was truly a sight to behold.",
       "authorId": "1",
-      "likes": 9,
-      "country": "Denmark",
-      "city": "Copenhagen",
+      "likes": 10,
+      "country": "Norway",
+      "city": "Oslo",
       "image": "resa2.jpg",
       "comments": [
         {
@@ -89,9 +82,9 @@
           "authorId": "4"
         },
         {
-          "id": "1733491890352",
-          "text": "hej",
-          "authorId": "4"
+          "id": "1733743815926",
+          "text": "wow",
+          "authorId": "3"
         }
       ]
     },
@@ -101,8 +94,8 @@
       "text": "I love eating, but nothing beats a good insect pie. I tried a new recipe with grasshoppers and crickets. The flavor was surprisingly delightful, and the texture was crispy.",
       "authorId": "3",
       "likes": 1,
-      "country": "Norway",
-      "city": "Oslo",
+      "country": "Sweden",
+      "city": "Malmo",
       "image": "resa3.jpg",
       "comments": [
         {
@@ -141,11 +134,6 @@
           "id": "8",
           "text": "I can help if you need.",
           "authorId": "9"
-        },
-        {
-          "id": "1733655867790",
-          "text": "wow",
-          "authorId": "1"
         }
       ]
     },
@@ -189,18 +177,7 @@
       ]
     },
     {
-      "id": "1733655741020",
-      "title": "test",
-      "text": "test",
-      "authorId": "1",
-      "comments": [],
-      "likes": 0,
-      "country": "test",
-      "city": "test",
-      "image": "resa1.jpg"
-    },
-    {
-      "id": "1733655779523",
+      "id": "1733742810628",
       "title": "test",
       "text": "test",
       "authorId": "1",

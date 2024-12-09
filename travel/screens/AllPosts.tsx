@@ -59,6 +59,7 @@ const AllPosts = ({ navigation }: Props) => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.post}>
+            <Text style={styles.userName}>Traveling in:  {item.country}</Text>
             <Text style={styles.postAuthor}>{item.title}</Text>
             <Text style={{ color: "#2C3E50" }}>{item.text}</Text>
             <TouchableOpacity
@@ -155,6 +156,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
     color: "#2C3E50",
+    marginTop: 10
   },
   info: {
     fontSize: 20,

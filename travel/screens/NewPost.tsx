@@ -27,8 +27,8 @@ const NewPost = () => {
       setError("Please select a user before creating a post.");
       return;
     }
-    if (!text.trim() || !title.trim()) {
-      setError("Both title and content are required.");
+    if (!text.trim() || !title.trim() || country.trim() || !city.trim() || !image.trim()) {
+      setError("All inputs are required and dont`t forget to choose a picture!");
       return;
     }
 
